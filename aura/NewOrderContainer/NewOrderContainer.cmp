@@ -1,0 +1,19 @@
+<!--
+ - Created by matheus on 19/06/20.
+ -->
+
+<aura:component description="NewOrderContainer">
+
+		<div class="slds-box">
+				<div class="slds-grid slds-gutters">
+						<div class="slds-col">
+							<c:NewOrderSearch />
+							<c:NewOrderPathContainer />
+						</div>
+						<div class="slds-col slds-size_4-of-12">
+								<c:NewOrderCart />
+						</div>
+				</div>
+		</div>
+
+</aura:component>

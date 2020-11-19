@@ -1,0 +1,11 @@
+<!--
+ - Created by matheus on 19/06/20.
+ -->
+
+<aura:component description="NewOrderCart">
+
+		<div class="slds-box">
+				Order Cart Bitch!
+		</div>
+
+</aura:component>

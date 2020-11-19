@@ -1,0 +1,45 @@
+.THIS .inner-second {
+  background-color: black;
+}
+
+.THIS .inner-third {
+  background-color: orange;
+}
+
+@media (min-width: 30em) {
+  .THIS .inner-first {
+    background-color: blue;
+  }
+}
+
+@media (min-width: 48em) {
+  .THIS .inner-first {
+    background-color: red;
+  }
+}
+
+@media (min-width: 64em) {
+  .THIS .inner-first {
+    background-color: orange;
+  }
+}
+
+@keyframes spinner {
+  to {transform: rotate(360deg);}
+}
+ 
+.THIS .spinner1:before {
+  content: '';
+  box-sizing: border-box;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 20px;
+  height: 20px;
+  margin-top: -10px;
+  margin-left: -10px;
+  border-radius: 50%;
+  border: 2px solid #ccc;
+  border-top-color: purple;
+  animation: spinner .6s linear infinite;
+}

@@ -1,0 +1,175 @@
+<!--
+ - Created by msantans on 22/07/2020.
+ -->
+
+<aura:component implements="force:appHostable,flexipage:availableForAllPageTypes,lightning:isUrlAddressable">
+
+    <div>
+        <div class="my-promo">
+
+            <div class="slds-grid slds-gutters slds-m-vertical_small bottom-border search-container">
+                <div class="slds-col">
+                    <div class="search-label">Search</div>
+                </div>
+                <div class="slds-col slds-text-align_right align-middle">
+                    <lightning:icon class="" iconName="utility:search" size="x-small" />
+                </div>
+            </div>
+
+            <div class="slds-grid slds-gutters slds-m-vertical_small slds-margin-top_small">
+                <div class="slds-col">
+                    <div class="h2-title gray-title slds-m-left_medium slds-p-vertical_small">YOUR PROMOTIONS</div>
+                </div>
+                <div class="slds-col slds-text-align_right  slds-m-top_x-small slds-m-right_small">
+                    <button class="slds-button slds-button_success"><lightning:icon class="slds-m-right_x-small" iconName="utility:filterList" size="xx-small" />Filter</button>
+                </div>
+            </div>
+
+            <div class="promotion-list slds-grid slds-grid_vertical">
+                <div class="slds-box">
+                    <div class="slds-grid slds-gutters slds-m-vertical_small bottom-border">
+                        <div class="slds-col">
+                            <div class="promotion-name">Promotion Name</div>
+                            <div class="promotion-detail">Some detail about the promo</div>
+                        </div>
+                        <div class="slds-col slds-text-align_right align-middle">
+                            <lightning:icon class="" iconName="utility:chevronright" size="xx-small" />
+                        </div>
+                    </div>
+                    <div class="slds-grid slds-gutters slds-m-vertical_small bottom-border">
+                        <div class="slds-col">
+                            <div class="promotion-name">Promotion Name</div>
+                            <div class="promotion-detail">Some detail about the promo</div>
+                        </div>
+                        <div class="slds-col slds-text-align_right align-middle">
+                            <lightning:icon class="" iconName="utility:chevronright" size="xx-small" />
+                        </div>
+                    </div>
+                    <div class="slds-grid slds-gutters slds-m-vertical_small bottom-border">
+                        <div class="slds-col">
+                            <div class="promotion-name">Promotion Name</div>
+                            <div class="promotion-detail">Some detail about the promo</div>
+                        </div>
+                        <div class="slds-col slds-text-align_right align-middle">
+                            <lightning:icon class="" iconName="utility:chevronright" size="xx-small" />
+                        </div>
+                    </div>
+                    <div class="slds-grid slds-gutters slds-m-vertical_small bottom-border">
+                        <div class="slds-col">
+                            <div class="promotion-name">Promotion Name</div>
+                            <div class="promotion-detail">Some detail about the promo</div>
+                        </div>
+                        <div class="slds-col slds-text-align_right align-middle">
+                            <lightning:icon class="" iconName="utility:chevronright" size="xx-small" />
+                        </div>
+                    </div>
+                    <div class="slds-grid slds-gutters slds-m-vertical_small bottom-border">
+                        <div class="slds-col">
+                            <div class="promotion-name">Promotion Name</div>
+                            <div class="promotion-detail">Some detail about the promo</div>
+                        </div>
+                        <div class="slds-col slds-text-align_right align-middle">
+                            <lightning:icon class="" iconName="utility:chevronright" size="xx-small" />
+                        </div>
+                    </div>
+                    <div class="slds-grid slds-gutters slds-m-vertical_small bottom-border">
+                        <div class="slds-col">
+                            <div class="promotion-name">Promotion Name</div>
+                            <div class="promotion-detail">Some detail about the promo</div>
+                        </div>
+                        <div class="slds-col slds-text-align_right align-middle">
+                            <lightning:icon class="" iconName="utility:chevronright" size="xx-small" />
+                        </div>
+                    </div>
+                    <div class="slds-grid slds-gutters slds-m-vertical_small bottom-border">
+                        <div class="slds-col">
+                            <div class="promotion-name">Promotion Name</div>
+                            <div class="promotion-detail">Some detail about the promo</div>
+                        </div>
+                        <div class="slds-col slds-text-align_right align-middle">
+                            <lightning:icon class="" iconName="utility:chevronright" size="xx-small" />
+                        </div>
+                    </div>
+                    <div class="slds-grid slds-gutters slds-m-vertical_small bottom-border">
+                        <div class="slds-col">
+                            <div class="promotion-name">Promotion Name</div>
+                            <div class="promotion-detail">Some detail about the promo</div>
+                        </div>
+                        <div class="slds-col slds-text-align_right align-middle">
+                            <lightning:icon class="" iconName="utility:chevronright" size="xx-small" />
+                        </div>
+                    </div>
+                    <div class="slds-grid slds-gutters slds-m-vertical_small bottom-border">
+                        <div class="slds-col">
+                            <div class="promotion-name">Promotion Name</div>
+                            <div class="promotion-detail">Some detail about the promo</div>
+                        </div>
+                        <div class="slds-col slds-text-align_right align-middle">
+                            <lightning:icon class="" iconName="utility:chevronright" size="xx-small" />
+                        </div>
+                    </div>
+                    <div class="slds-grid slds-gutters slds-m-vertical_small bottom-border">
+                        <div class="slds-col">
+                            <div class="promotion-name">Promotion Name</div>
+                            <div class="promotion-detail">Some detail about the promo</div>
+                        </div>
+                        <div class="slds-col slds-text-align_right align-middle">
+                            <lightning:icon class="" iconName="utility:chevronright" size="xx-small" />
+                        </div>
+                    </div>
+                    <div class="slds-grid slds-gutters slds-m-vertical_small bottom-border">
+                        <div class="slds-col">
+                            <div class="promotion-name">Promotion Name</div>
+                            <div class="promotion-detail">Some detail about the promo</div>
+                        </div>
+                        <div class="slds-col slds-text-align_right align-middle">
+                            <lightning:icon class="" iconName="utility:chevronright" size="xx-small" />
+                        </div>
+                    </div>
+                    <div class="slds-grid slds-gutters slds-m-vertical_small bottom-border">
+                        <div class="slds-col">
+                            <div class="promotion-name">Promotion Name</div>
+                            <div class="promotion-detail">Some detail about the promo</div>
+                        </div>
+                        <div class="slds-col slds-text-align_right align-middle">
+                            <lightning:icon class="" iconName="utility:chevronright" size="xx-small" />
+                        </div>
+                    </div>
+                    <div class="slds-grid slds-gutters slds-m-vertical_small bottom-border">
+                        <div class="slds-col">
+                            <div class="promotion-name">Promotion Name</div>
+                            <div class="promotion-detail">Some detail about the promo</div>
+                        </div>
+                        <div class="slds-col slds-text-align_right align-middle">
+                            <lightning:icon class="" iconName="utility:chevronright" size="xx-small" />
+                        </div>
+                    </div>
+                    <div class="slds-grid slds-gutters slds-m-vertical_small bottom-border">
+                        <div class="slds-col">
+                            <div class="promotion-name">Promotion Name</div>
+                            <div class="promotion-detail">Some detail about the promo</div>
+                        </div>
+                        <div class="slds-col slds-text-align_right align-middle">
+                            <lightning:icon class="" iconName="utility:chevronright" size="xx-small" />
+                        </div>
+                    </div>
+                    <div class="slds-grid slds-gutters slds-m-vertical_small" style="margin-bottom: 3rem;">
+                        <div class="slds-col">
+                            <div class="promotion-name">Promotion Name</div>
+                            <div class="promotion-detail">Some detail about the promo</div>
+                        </div>
+                        <div class="slds-col slds-text-align_right align-middle">
+                            <lightning:icon class="" iconName="utility:chevronright" size="xx-small" />
+                        </div>
+                    </div>
+                </div>
+                <div class="view-all">
+                    <div class="slds-col">
+                        <span><lightning:button variant="brand" label="NEW PROMO" title="Brand action" onclick="{!c.createRecord}"/></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</aura:component>

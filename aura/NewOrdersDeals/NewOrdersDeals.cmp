@@ -1,0 +1,11 @@
+<!--
+ - Created by matheus on 19/06/20.
+ -->
+
+<aura:component description="NewOrdersDeals">
+
+		<div>
+				<h2>Deals</h2>
+		</div>
+
+</aura:component>

@@ -1,0 +1,16 @@
+/**
+ * Created by matheus on 19/06/20.
+ */
+
+.THIS .component-container__height {
+    background-color: white;
+    height: calc(100vh - 85px);
+}
+
+.THIS .c-abi-display__block {
+    display: block;
+}
+
+.THIS .c-abi-display__none {
+    display: none;
+}

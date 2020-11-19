@@ -1,0 +1,57 @@
+/**
+ * Created by msantans on 21/07/2020.
+ */
+
+
+.THIS .chart-m {
+    display: table;
+    table-layout: fixed;
+    width: 60%;
+    max-width: 700px;
+    height: 200px;
+    margin: 0 auto;
+    background-image: linear-gradient(bottom, rgba(0, 0, 0, 0.1) 2%, transparent 2%);
+    background-size: 100% 50px;
+    background-position: left top;
+}
+.THIS .chart-m li {
+    position: relative;
+    display: table-cell;
+    vertical-align: bottom;
+    height: 200px;
+    width: 70px;
+}
+
+.THIS .chart-m span {
+    margin: 0 1em;
+    display: block;
+    animation: draw 1s ease-in-out;
+}
+
+.THIS .chart-m span.pink {
+    background: #D0006F;
+}
+
+.THIS .chart-m span.blue {
+    background: #0085CA;
+}
+
+.THIS .chart-m span.orange {
+    background: #ED8B00;
+}
+
+.THIS .chart-m span:before {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 100%;
+    padding: 5px 1em 0;
+    display: block;
+    text-align: center;
+    content: attr(title);
+    word-wrap: break-word;
+}
+
+.THIS .line-bars {
+    background-color: lightgray;
+}

@@ -1,0 +1,24 @@
+<!--
+ - Created by msantans on 21/07/2020.
+ -->
+
+<aura:component description="PersonalChartMonthly">
+
+    <div>
+        <ul class="chart-t">
+            <li>
+                <span style="height:75%"></span>
+            </li>
+            <li>
+                <span style="height:16%"></span>
+            </li>
+            <li>
+                <span style="height:55%"></span>
+            </li>
+            <li>
+                <span style="height:80%"></span>
+            </li>
+        </ul>
+    </div>
+
+</aura:component>

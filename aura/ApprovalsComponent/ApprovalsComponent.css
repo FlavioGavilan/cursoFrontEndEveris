@@ -1,0 +1,86 @@
+/**
+ * Created by msantans on 16/07/2020.
+ */
+
+.THIS .h1-title {
+    font-weight: 900;
+    font-size: 1rem;
+    color: #616161;
+}
+
+.THIS #decline-promo,
+.THIS #approved-promo,
+.THIS .promos-approval {
+    background-color: white;
+    border-radius: 0;
+    border: none;
+}
+
+.THIS #decline-promo,
+.THIS #approved-promo {
+    padding: .5rem;
+}
+
+.THIS #promosCarousel {
+    overflow: overlay;
+}
+
+.THIS .approval-container {
+    border: 1px solid #ececec;
+    border-radius: 50px;
+    background-color: #f4f4f4;
+}
+
+.THIS .approval-container > span {
+    margin-left: 15px;
+    color: #717171;
+}
+
+.THIS .icon-arrow {
+    width: 100%;
+    transition: all .2s ease;
+}
+
+.THIS .i-arrow-rotate {
+  transform: rotate(-90deg);
+}
+.THIS .slds-button:focus,
+.THIS .slds-button:active {
+    color: #272626 !important;
+    text-decoration: none !important;
+}
+
+.THIS .accordion-title {
+    font-size: .9rem;
+    font-weight: 900;
+    color: #585858;
+}
+
+.THIS .slds-icon-utility-check > lightning-primitive-icon > .slds-icon-text-default {
+    fill: #2ff73c;
+}
+.THIS .slds-icon-utility-close > lightning-primitive-icon > .slds-icon-text-default {
+    fill: #f72f2f;
+}
+
+.THIS .slds-card+.slds-card {
+    margin-top: 0;
+}
+
+.THIS .slds-card__footer {
+    border-top: none;
+}
+
+.THIS article {
+    border: none;
+}
+
+.THIS .border-right {
+    border-right: 1px solid gainsboro;
+    border-radius: 0;
+}
+
+.THIS .border-left {
+    border-left: 1px solid gainsboro;
+    border-radius: 0;
+}

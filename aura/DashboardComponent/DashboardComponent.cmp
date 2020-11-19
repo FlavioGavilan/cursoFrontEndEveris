@@ -1,0 +1,199 @@
+<!--
+ - Created by msantans on 15/07/2020.
+ -->
+
+<aura:component implements="force:appHostable,flexipage:availableForAllPageTypes">
+
+    <aura:attribute name="personalRange" type="String" access="global" />
+    <aura:attribute name="teamRange" type="String" access="global" />
+    <aura:attribute name="isPersonalMonthly" type="Boolean" access="global" default="true"/>
+
+    <aura:handler name="init" value="{!this}" action="{!c.init}"/>
+
+    <div>
+        <div  class="main">
+            <section class="section1">
+                <h1 class="h1-title slds-m-vertical_medium slds-m-horizontal_medium">My Promo</h1>
+                <div class="slds-grid slds-gutters slds-p-horizontal_medium slds-m-bottom_small">
+                    <div class="slds-col">
+                        <span class="analytics">Analytics</span>
+                    </div>
+                    <div class="slds-col slds-text-align_right">
+                        <span class="monthly">Monthly</span>
+                    </div>
+                </div>
+
+                <div class="slds-grid slds-gutters slds-p-horizontal_large">
+                    <div class="">
+                        <div class="report blue">
+                            <div class="report-inner">
+                                <div class="icon-fit slds-float_right">
+                                    <lightning:icon iconName="utility:arrowup" size="xx-small" alternativeText="Promo" title="Promo" />
+                                </div>
+                                <div class="slds-m-top_medium">
+                                    <div class="actual">
+                                        <span>97.8%</span>
+                                    </div>
+                                    <div class="detail">
+                                        <span>87.2%</span>
+                                    </div>
+                                </div>
+                                <div class="progress-bar slds-m-vertical_small">
+                                    <div class="progress-bar-left"></div>
+                                    <div class="progress-bar-right"></div>
+                                </div>
+                                <div class="slds-m-bottom_large c-footer">
+                                    <span>Total sold last month</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="slds-col-c">
+                        <div class="report green">
+                            <div class="report-inner">
+                                <div class="icon-fit slds-float_right">
+                                    <lightning:icon iconName="utility:arrowdown" size="xx-small" alternativeText="Promo" title="Promo" />
+                                </div>
+                                <div class="slds-m-top_medium">
+                                    <div class="actual">
+                                        <span>-7.8%</span>
+                                    </div>
+                                    <div class="detail">
+                                        <span>7.2%</span>
+                                    </div>
+                                </div>
+                                <div class="progress-bar slds-m-vertical_small">
+                                    <div class="progress-bar-left"></div>
+                                    <div class="progress-bar-right"></div>
+                                </div>
+                                <div class="slds-m-bottom_large c-footer">
+                                    <span>Total sold last month</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="">
+                        <div class="report light">
+                            <div class="report-inner">
+                                <div class="icon-fit slds-float_right">
+                                    <lightning:icon iconName="utility:arrowup" size="xx-small" alternativeText="Promo" title="Promo" />
+                                </div>
+                                <div class="slds-m-top_medium">
+                                    <div class="actual">
+                                        <span>58.8%</span>
+                                    </div>
+                                    <div class="detail">
+                                        <span>37.2%</span>
+                                    </div>
+                                </div>
+                                <div class="progress-bar slds-m-vertical_small">
+                                    <div class="progress-bar-left"></div>
+                                    <div class="progress-bar-right"></div>
+                                </div>
+                                <div class="slds-m-bottom_large c-footer">
+                                    <span>Total sold last month</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="section2">
+                <h2 class="h2-title slds-m-vertical_medium slds-m-horizontal_medium">My performance</h2>
+                <div class="slds-grid slds-gutters slds-m-horizontal_medium slds-m-bottom_xx-small">
+                    <div class="slds-col total-balance--label">
+                        <span>Total balance</span>
+                    </div>
+                    <div class="slds-col total-balance--value slds-float_right slds-text-align_right">
+                        <span>$9,685.68</span>
+                    </div>
+                </div>
+                <div class="slds-grid slds-gutters">
+                    <div class="slds-col">
+                        <div class="slds-box balance-container">
+                            <div class="slds-col">
+                                <span>Sold in</span>
+                                <span class="month-destac slds-m-left_xx-small">{!v.personalRange}</span>
+                                <div class="slds-dropdown-trigger slds-dropdown-trigger_click slds-button_last slds-is-open">
+                                    <button class="slds-button slds-button_icon" aria-haspopup="true" title="Show More" onclick="{!c.showListOptionPersonal}" aura:id="personalOption">
+                                        <lightning:icon class="slds-m-left_xx-small" iconName="utility:chevrondown" size="xx-small"/>
+                                    </button>
+                                    <div class="slds-dropdown slds-dropdown_right slds-dropdown_actions slds-hide" aura:id="personalOptionList">
+                                        <ul class="slds-dropdown__list" role="menu">
+                                            <li class="slds-dropdown__item" role="presentation" onclick="{!c.checkSelectedPersonal}" aura:id="pSelectWeek">
+                                                <a href="javascript:void(0);" role="menuitem" tabindex="-1">
+                                                    <span class="slds-truncate" title="Weekly">Weekly</span>
+                                                </a>
+                                            </li>
+                                            <li class="slds-dropdown__item disable" role="presentation" onclick="{!c.checkSelectedPersonal}" aura:id="pSelectMonth">
+                                                <a href="javascript:void(0);" role="menuitem" tabindex="-1">
+                                                    <span class="slds-truncate" title="Monthly">Monthly</span>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <aura:if isTrue="{!v.isPersonalMonthly}">
+                                <div>
+                                    <c:PersonalChartWeekly />
+                                </div>
+                                <aura:set attribute="else">
+                                    <div>
+                                        <c:PersonalChartMonthly />
+                                    </div>
+                                </aura:set>
+                            </aura:if>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="section3">
+                <h2 class="h2-title slds-m-bottom_medium slds-m-horizontal_medium">Team performance</h2>
+                <div class="slds-grid slds-gutters slds-m-horizontal_medium slds-m-bottom_xx-small">
+                    <div class="slds-col total-balance--label">
+                        <span>Total balance</span>
+                    </div>
+                    <div class="slds-col total-balance--value slds-float_right slds-text-align_right">
+                        <span>$98,125.68</span>
+                    </div>
+                </div>
+                <div class="slds-grid slds-gutters">
+                    <div class="slds-col">
+                        <div class="slds-box balance-container">
+                            <div class="slds-col">
+                                <span>Sold in</span>
+                                <span class="month-destac slds-m-left_xx-small">{!v.teamRange}</span>
+                                <button class="slds-button slds-button_icon" aria-haspopup="true" title="Show More" onclick="{!c.showListOptionTeam}" aura:id="teamOption">
+                                    <lightning:icon class="slds-m-left_xx-small" iconName="utility:chevrondown" size="xx-small" alternativeText="Show alternative" title="Show alternative" />
+                                    <span class="slds-assistive-text">Show More</span>
+                                </button>
+                                <div class="slds-dropdown slds-dropdown_right slds-dropdown_actions slds-hide" aura:id="teamOptionList">
+                                    <ul class="slds-dropdown__list" role="menu">
+                                        <li class="slds-dropdown__item" role="presentation">
+                                            <a href="javascript:void(0);" role="menuitem" tabindex="-1">
+                                                <span class="slds-truncate" title="Weekly">Weekly</span>
+                                            </a>
+                                        </li>
+                                        <li class="slds-dropdown__item" role="presentation">
+                                            <a href="javascript:void(0);" role="menuitem" tabindex="-1">
+                                                <span class="slds-truncate" title="Monthly">Monthly</span>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div>
+                                <c:TeamChartMonthly />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
+
+</aura:component>

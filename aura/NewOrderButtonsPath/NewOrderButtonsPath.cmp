@@ -1,0 +1,19 @@
+<!--
+ - Created by matheus on 19/06/20.
+ -->
+
+<aura:component description="NewOrderButtonsPath" access="global">
+		<div>
+				<div class="slds-button-group" role="group">
+						<button data-collapse-component="0" onclick="{!c.eventClick}">
+								<lightning:icon iconName="utility:connected_apps" alternativeText="Connected" size="small" title="Connected" />
+						</button>
+						<button data-collapse-component="1">
+								<lightning:icon iconName="utility:connected_apps" alternativeText="Connected" size="small" title="Connected" />
+						</button>
+						<button data-collapse-component="2">
+								<lightning:icon iconName="utility:connected_apps" alternativeText="Connected" size="small" title="Connected" />
+						</button>
+				</div>
+		</div>
+</aura:component>

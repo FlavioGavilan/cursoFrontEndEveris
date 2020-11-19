@@ -1,0 +1,237 @@
+<!--
+ - Created by msantans on 15/07/2020.
+ -->
+
+<aura:component implements="force:appHostable,flexipage:availableForAllPageTypes,lightning:isUrlAddressable">
+    
+
+    <div>
+        <div class="kam-cockpit">
+
+            <section class="slds-box slds-m-bottom_small">
+                <span class="h2-title">Promos in-flight</span>
+                <div class="slds-grid slds-gutters promos-in-flight slds-p-top_medium slds-align_absolute-center">
+                    <c:PersonalChartWeekly />
+                </div>
+            </section>
+
+            <section class="slds-m-top_x-large promos-next-week">
+                <div class="h2-title gray-title slds-m-left_medium slds-p-bottom_medium ">Promos planned for next week</div>
+                <div class="promotion-list slds-grid slds-grid_vertical">
+                    <div class="slds-box">
+                        <div class="slds-grid slds-gutters slds-m-vertical_small bottom-border">
+                            <div class="slds-col">
+                                <div class="promotion-name">Promotion Name</div>
+                                <div class="promotion-detail">Some detail about the promo</div>
+                            </div>
+                            <div class="slds-col slds-text-align_right align-middle">
+                                <lightning:icon class="" iconName="utility:chevronright" size="xx-small" />
+                            </div>
+                        </div>
+                        <div class="slds-grid slds-gutters slds-m-vertical_small bottom-border">
+                            <div class="slds-col">
+                                <div class="promotion-name">Promotion Name</div>
+                                <div class="promotion-detail">Some detail about the promo</div>
+                            </div>
+                            <div class="slds-col slds-text-align_right align-middle">
+                                <lightning:icon class="" iconName="utility:chevronright" size="xx-small" />
+                            </div>
+                        </div>
+                        <div class="slds-grid slds-gutters slds-m-vertical_small">
+                            <div class="slds-col">
+                                <div class="promotion-name">Promotion Name</div>
+                                <div class="promotion-detail">Some detail about the promo</div>
+                            </div>
+                            <div class="slds-col slds-text-align_right align-middle">
+                                <lightning:icon class="" iconName="utility:chevronright" size="xx-small" />
+                            </div>
+                        </div>
+                    </div>
+                    <div class="view-all">
+                        <div class="slds-col">
+                            <lightning:workspaceAPI aura:id="workspace"/>
+                            <!--<lightning:button label="Open Tab" onclick="{! c.openTab }" />-->
+                            <span>VIEW ALL</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="slds-m-top_x-large peding-approvals slds-p-bottom_x-large">
+                <div class="h2-title gray-title slds-m-left_medium slds-p-bottom_medium ">Pending Approvals</div>
+                <div class="promotion-list slds-grid slds-grid_vertical">
+                    <div class="slds-box">
+                        <div class="slds-grid slds-gutters slds-m-vertical_small bottom-border">
+                            <div style="padding-left:.95rem">
+                                <span class="circle-waiting"></span>
+                            </div>
+                            <div class="slds-col">
+                                <div class="status waiting">Waiting</div>
+                                <div class="promotion-name">Promotion Name</div>
+                                <div class="promotion-detail">Sent: 15/05/2020</div>
+                            </div>
+                            <div class="slds-col slds-text-align_right align-middle">
+                                <lightning:icon class="" iconName="utility:chevronright" size="xx-small" />
+                            </div>
+                        </div>
+                        <div class="slds-grid slds-gutters slds-m-vertical_small">
+                            <div style="padding-left:.95rem">
+                                <span class="circle-approved"></span>
+                            </div>
+                            <div class="slds-col">
+                                <div class="status approved">Approved</div>
+                                <div class="promotion-name">Promotion Name</div>
+                                <div class="promotion-detail">Sent: 13/05/2020</div>
+                            </div>
+                            <div class="slds-col slds-text-align_right align-middle">
+                                <lightning:icon class="" iconName="utility:chevronright" size="xx-small" />
+                            </div>
+                        </div>
+                    </div>
+                    <div class="view-all">
+                        <div class="slds-col">
+                            <span>VIEW ALL</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+                <!--
+                <section class="slds-m-top_x-large promos-next-week">
+                    <div class="slds-grid slds-gutters promos-next-week-carousel slds-p-top_medium" id="promosCarousel">
+                    <article class="slds-card slds-m-right_large">
+                        <div class="slds-card__header slds-grid">
+                            <header class="slds-media slds-media_center slds-has-flexi-truncate">
+                                <lightning:icon class="slds-m-right_small" iconName="action:quote" size="xx-small" alternativeText="Promo" title="Promo" />
+                                <div class="slds-media__body">
+                                    <h2 class="slds-card__header-title">
+                                        <a href="javascript:void(0);" class="slds-card__header-link slds-truncate" title="Accounts">
+                                            <span class="promo-title-nw">#CheiroDeLimpeza</span>
+                                        </a>
+                                    </h2>
+                                </div>
+                            </header>
+                        </div>
+                        <div class="slds-card__body slds-card__body_inner">
+                            <ul>
+                                <li>
+                                    <div class="signal red"></div>
+                                    <span>OMO desinfetante pisos</span>
+                                </li>
+                                <li>
+                                    <div class="signal green"></div>
+                                    <span>BRILHANTE desinfetante 5L</span>
+                                </li>
+                                <li>
+                                    <div class="signal red"></div>
+                                    <span>KIT de higiênização</span>
+                                </li>
+                            </ul>
+                        </div>
+                        <footer class="slds-card__footer">
+                            <a class="slds-card__footer-action" href="javascript:void(0);">Detail
+                                <span class="slds-assistive-text">Accounts</span>
+                            </a>
+                        </footer>
+                    </article>
+
+                    <article class="slds-card">
+                        <div class="slds-card__header slds-grid">
+                            <header class="slds-media slds-media_center slds-has-flexi-truncate">
+                                <lightning:icon class="slds-m-right_small" iconName="action:quote" size="xx-small" alternativeText="Promo" title="Promo" />
+                                <div class="slds-media__body">
+                                    <h2 class="slds-card__header-title">
+                                        <a href="javascript:void(0);" class="slds-card__header-link slds-truncate" title="Accounts">
+                                            <span class="promo-title-nw">#CIF+5</span>
+                                        </a>
+                                    </h2>
+                                </div>
+                            </header>
+                        </div>
+                        <div class="slds-card__body slds-card__body_inner">
+                            <ul>
+                                <li>
+                                    <div class="signal green"></div>
+                                    <span>CIF higienizador + Álcoll 2L</span>
+                                </li>
+                                <li>
+                                    <div class="signal green"></div>
+                                    <span>CIF Peróxido 5L</span>
+                                </li>
+                                <li>
+                                    <div class="signal blue"></div>
+                                    <span>CIF Multiuso 2L</span>
+                                </li>
+                            </ul>
+                        </div>
+                        <footer class="slds-card__footer">
+                            <a class="slds-card__footer-action" href="javascript:void(0);">Detail
+                                <span class="slds-assistive-text">Accounts</span>
+                            </a>
+                        </footer>
+                    </article>
+
+                    <article class="slds-card slds-m-left_large">
+                        <div class="slds-card__header slds-grid">
+                            <header class="slds-media slds-media_center slds-has-flexi-truncate">
+                                <lightning:icon class="slds-m-right_small" iconName="action:quote" size="xx-small" alternativeText="Promo" title="Promo" />
+                                <div class="slds-media__body">
+                                    <h2 class="slds-card__header-title">
+                                        <a href="javascript:void(0);" class="slds-card__header-link slds-truncate" title="Accounts">
+                                            <span class="promo-title-nw">#RoupaLimpa</span>
+                                        </a>
+                                    </h2>
+                                </div>
+                            </header>
+                        </div>
+                        <div class="slds-card__body slds-card__body_inner">
+                            <ul>
+                                <li>
+                                    <div class="signal blue"></div>
+                                    <span>OMO lavagem perfeita 7L</span>
+                                </li>
+                                <li>
+                                    <div class="signal green"></div>
+                                    <span>OMO Tira-manchas 5L</span>
+                                </li>
+                                <li>
+                                    <div class="signal green"></div>
+                                    <span>COMFORT concentrado 5L</span>
+                                </li>
+                            </ul>
+                        </div>
+                        <footer class="slds-card__footer">
+                            <a class="slds-card__footer-action" href="javascript:void(0);">Detail
+                                <span class="slds-assistive-text">Accounts</span>
+                            </a>
+                        </footer>
+                    </article>
+                </div>
+            </section>-->
+
+            <!--<section class="slds-box slds-m-vertical_small">
+                <lightning:icon class="slds-m-right_x-small" iconName="action:approval" size="xx-small" alternativeText="Promo" title="Promo" />
+                <span class="h2-title">Pedding approvals</span>
+                <div class="slds-grid slds-grid_vertical slds-p-top_medium">
+                    <div class="slds-col">
+                        <div class="slds-p-vertical_x-small slds-m-vertical_x-small approval-container">
+                            <span class="approval-t">#LimpezaPesada</span>
+                        </div>
+                    </div>
+                    <div class="slds-col">
+                        <div class="slds-p-vertical_x-small slds-m-vertical_x-small approval-container">
+                            <span class="approval-t">#CozinhaNova</span>
+                        </div>
+                    </div>
+                    <div class="slds-col">
+                        <div class="slds-p-vertical_x-small slds-m-vertical_x-small approval-container">
+                            <span class="approval-t">#SempreComVc</span>
+                        </div>
+                    </div>
+                </div>
+            </section>-->
+
+        </div>
+    </div>
+
+</aura:component>

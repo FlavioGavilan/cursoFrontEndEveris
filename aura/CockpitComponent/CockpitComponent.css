@@ -1,0 +1,200 @@
+/**
+ * Created by msantans on 15/07/2020.
+ */
+
+@font-face {
+    font-family: dmedium;
+    src: url('/resource/dmedium');
+}
+
+@font-face {
+    font-family: dlight;
+    src: url('/resource/dlight');
+}
+
+@font-face {
+    font-family: dbold;
+    src: url('/resource/dbold');
+}
+
+@font-face {
+    font-family: dblack;
+    src: url('/resource/dblack');
+}
+
+
+.THIS .h2-title {
+    font-size: 1.1rem;
+    color: #00A3AD;
+    text-transform: uppercase;
+    font-family: dbold, 'SansSerif';
+}
+
+.THIS .gray-title {
+    color: #61676b;
+}
+
+.THIS .align-middle {
+    justify-content: right;
+    align-content: center;
+    align-items: normal;
+    margin: auto;
+}
+
+.THIS .promotion-name {
+    font-family: dbold, 'SansSerif';
+    color: #61676b;
+    font-size: .95rem;
+}
+
+.THIS .status {
+    font-family: dmedium, 'SansSerif';
+    font-size: .95rem;
+}
+
+.THIS .status.waiting {
+    color: #ED8B00;
+}
+
+.THIS .circle-waiting {
+    width: .7rem;
+    height: .7rem;
+    background-color: #ed8b00;
+    display: block;
+    border-radius: 50%;
+    margin-top: 6px;
+}
+
+.THIS .status.approved {
+    color: #00B388;
+}
+
+.THIS .circle-approved {
+    width: .7rem;
+    height: .7rem;
+    background-color: #00B388;
+    display: block;
+    border-radius: 50%;
+    margin-top: 6px;
+}
+
+.THIS .promotion-detail {
+    font-family: dlight, 'SansSerif';
+    color: #61676b;
+}
+
+.THIS .bottom-border {
+    border-bottom: 1px solid #c3c3c3;
+    padding-bottom: .75rem;
+}
+
+.THIS .view-all {
+    background-color: #00A3AD;
+    text-align: center;
+    padding: .9rem;
+    font-size: .9rem;
+    color: white;
+    font-family: dbold, 'SansSerif';
+}
+
+.THIS .slds-box {
+    background-color: #fff;
+    border: none;
+    border-radius: 0;
+}
+
+.THIS .slds-card+.slds-card {
+    margin-top: 0;
+}
+
+.THIS .slds-card__footer {
+    background-color: #313896;
+}
+
+.THIS a {
+    color: white;
+}
+
+.THIS .promos-next-week-carousel {
+    overflow: scroll;
+    margin: 0 2px;
+}
+
+.THIS .promo-title-nw {
+    font-weight: 700;
+    color: #626262;
+}
+
+.THIS .slds-card {
+    min-width: 250px;
+    margin-bottom: 10px;
+}
+
+.THIS ul {
+    margin-left: 10px;
+}
+
+.THIS ul > li {
+    margin-bottom: 5px;
+    font-size: 12px;
+    font-weight: 500;
+    color: #272626;
+}
+
+.THIS .signal {
+    height: 8px;
+    width: 8px;
+    position: relative;
+    float: left;
+    margin-top: 5px;
+    border-radius: 50%;
+    margin-right: 5px;
+}
+
+.THIS .signal.red {
+    background-color: #ff2929;
+}
+
+.THIS .signal.green {
+    background-color: #3fe326;
+}
+
+.THIS .signal.blue {
+    background-color: #29aaed;
+}
+
+.THIS .approval-container {
+     border: 1px solid #ececec;
+     border-radius: 50px;
+     background-color: #f4f4f4;
+ }
+
+.THIS .approval-container > span {
+    margin-left: 15px;
+    color: #717171;
+}
+
+.THIS .promo-title {
+    font-size: 4rem;
+    font-weight: 900;
+}
+
+.THIS .promo-red {
+    color: #e87575;
+    font-weight: 700;
+}
+
+.THIS .promo-blue {
+    color: #484879;
+    font-weight: 700;
+}
+
+.THIS .promo-gray {
+    font-weight: 700;
+    color: #464646;
+}
+
+@font-face {
+    font-family: dinmedium;
+    src: url('/resource/dinmedium');
+}

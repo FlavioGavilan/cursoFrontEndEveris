@@ -1,0 +1,98 @@
+/**
+ * Created by msantans on 22/07/2020.
+ */
+
+@font-face {
+    font-family: dmedium;
+    src: url('/resource/dmedium');
+}
+
+@font-face {
+    font-family: dlight;
+    src: url('/resource/dlight');
+}
+
+@font-face {
+    font-family: dbold;
+    src: url('/resource/dbold');
+}
+
+@font-face {
+    font-family: dblack;
+    src: url('/resource/dblack');
+}
+
+.THIS .my-promo {
+    margin-top: -1rem;
+}
+
+.THIS .search-container {
+    background-color: #61676B;
+    padding: 1rem;
+    color: white;
+    font-family: dbold, 'SansSerif';
+    font-size: 1rem;
+}
+.THIS .slds-icon-utility-filterList > lightning-primitive-icon > .slds-icon-text-default,
+.THIS .slds-icon-utility-search > lightning-primitive-icon > .slds-icon-text-default {
+    fill: white;
+}
+
+
+.THIS .h2-title {
+    font-size: 1.1rem;
+    color: #00A3AD;
+    text-transform: uppercase;
+    font-family: dbold, 'SansSerif';
+}
+
+.THIS .gray-title {
+    color: #61676b;
+}
+
+.THIS .slds-button_success {
+    color: white;
+    font-family: dlight;
+    background-color: #00B388;
+}
+
+.THIS .view-all {
+    background-color: #00A3AD;
+    text-align: center;
+    padding: .9rem;
+    font-size: .9rem;
+    color: white;
+    font-family: dbold, 'SansSerif';
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}
+
+.THIS .slds-box {
+    background-color: #fff;
+    border: none;
+    border-radius: 0;
+}
+
+.THIS .align-middle {
+    justify-content: right;
+    align-content: center;
+    align-items: normal;
+    margin: auto;
+}
+
+.THIS .promotion-name {
+    font-family: dbold, 'SansSerif';
+    color: #61676b;
+    font-size: .95rem;
+}
+
+.THIS .promotion-detail {
+    font-family: dlight, 'SansSerif';
+    color: #61676b;
+}
+
+.THIS .bottom-border {
+    border-bottom: 1px solid #c3c3c3;
+    padding-bottom: .75rem;
+}

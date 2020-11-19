@@ -1,0 +1,173 @@
+<!--
+ - Created by msantans on 16/07/2020.
+ -->
+
+<aura:component implements="force:appHostable,flexipage:availableForAllPageTypes">
+
+    <aura:attribute name="isModalOpen" type="Boolean" default="false" access="global" />
+
+    <div>
+        <section class="">
+            <h1 class="h1-title slds-m-vertical_medium slds-m-horizontal_medium">Approval</h1>
+        </section>
+        <section class="slds-box slds-m-vertical_small promos-approval">
+            <lightning:icon class="slds-m-right_x-small" iconName="action:approval" size="xx-small" alternativeText="Promo" title="Promo" />
+            <span class="h2-title">Promotions to Approve</span>
+            <div class="slds-grid slds-gutters promos-next-week-carousel slds-p-top_medium" id="promosCarousel">
+                <article class="slds-card slds-p-right_small border-right">
+                    <div class="slds-card__header slds-grid">
+                        <header class="slds-media slds-media_center slds-has-flexi-truncate">
+                            <lightning:icon class="slds-m-right_small" iconName="action:quote" size="xx-small" alternativeText="Promo" title="Promo" />
+                            <div class="slds-media__body">
+                                <h2 class="slds-card__header-title">
+                                    <a href="javascript:void(0);" class="slds-card__header-link slds-truncate" title="Accounts">
+                                        <span class="promo-title-nw">#BUY Hellmann's Traditional Mayonnaise 500g</span>
+                                    </a>
+                                </h2>
+                            </div>
+                        </header>
+                    </div>
+                    <div class="slds-card__body slds-card__body_inner">
+                        <ul>
+                            <li>
+                                <div class="signal red"></div>
+                                <span>BUY Hellmann's Traditional Mayonnaise 500g, EARN Regular Gourmet Mayonnaise 500g</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <footer class="slds-card__footer">
+                        <div style="width:100%">
+                            <button class="slds-button slds-button_brand slds-m-bottom_xx-small" style="width:100%" onclick="{!c.modalHandler}">Approve</button>
+                        </div>
+                        <div style="width:100%">
+                            <button class="slds-button slds-button_destructive" style="width:100%" onclick="{!c.modalHandler}">Decline</button>
+                        </div>
+                    </footer>
+                </article>
+
+                <article class="slds-card slds-m-right_small slds-p-left_small">
+                    <div class="slds-card__header slds-grid">
+                        <header class="slds-media slds-media_center slds-has-flexi-truncate">
+                            <lightning:icon class="slds-m-right_small" iconName="action:quote" size="xx-small" alternativeText="Promo" title="Promo" />
+                            <div class="slds-media__body">
+                                <h2 class="slds-card__header-title">
+                                    <a href="javascript:void(0);" class="slds-card__header-link slds-truncate" title="Accounts">
+                                        <span class="promo-title-nw">BUY 50 Chicken Knorr Broth 6 Cubes 57g</span>
+                                    </a>
+                                </h2>
+                            </div>
+                        </header>
+                    </div>
+                    <div class="slds-card__body slds-card__body_inner">
+                        <ul>
+                            <li>
+                                <div class="signal red"></div>
+                                <span>BUY 50 Chicken Knorr Broth 6 Cubes 57g EARN 1 Knorr Seasoning Ideal for Chicken</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <footer class="slds-card__footer">
+                        <div style="width:100%">
+                            <button class="slds-button slds-button_brand slds-m-bottom_xx-small" style="width:100%" onclick="{!c.modalHandler}">Approve</button>
+                        </div>
+                        <div style="width:100%">
+                            <button class="slds-button slds-button_destructive" style="width:100%" onclick="{!c.modalHandler}">Decline</button>
+                        </div>
+                    </footer>
+                </article>
+            </div>
+        </section>
+
+        <section class="slds-box slds-m-vertical_small promos-approval" id="approved-promo">
+            <ul class="slds-accordion">
+                <li class="slds-accordion__list-item">
+                    <section class="slds-accordion__section" aura:id="approvedSection">
+                        <div class="slds-accordion__summary">
+                            <h3 class="slds-accordion__summary-heading">
+                                <button aria-controls="accordion-details-03" aria-expanded="true" class="slds-button slds-button_reset slds-accordion__summary-action" onclick="{!c.approved}">
+                                    <lightning:icon class="slds-m-right_x-small" iconName="utility:check" size="xx-small" alternativeText="Promo" title="Promo" />
+                                    <span class="accordion-title">Approved</span>
+                                    <div class="icon-arrow">
+                                        <lightning:icon class="slds-float_right i-arrow" iconName="utility:chevronleft" size="xx-small" alternativeText="Promo" title="Promo" aura:id="approvedIcon"/>
+                                    </div>
+                                </button>
+                            </h3>
+                        </div>
+                        <div class="slds-accordion__content" id="accordion-details-03">
+                            <div class="slds-grid slds-grid_vertical slds-p-top_medium">
+                                <div class="slds-col">
+                                    <div class="slds-p-vertical_x-small slds-m-vertical_x-small approval-container">
+                                        <span class="approval-t">#BUY Hellmann's Traditional Mayonnaise 500g</span>
+                                    </div>
+                                </div>
+                                <div class="slds-col">
+                                    <div class="slds-p-vertical_x-small slds-m-vertical_x-small approval-container">
+                                        <span class="approval-t">#BUY 50 Chicken Knorr Broth 6 Cubes 57g</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                </li>
+            </ul>
+        </section>
+
+        <section class="slds-box slds-m-vertical_small promos-approval" id="decline-promo">
+            <ul class="slds-accordion">
+                <li class="slds-accordion__list-item">
+                    <section class="slds-accordion__section" aura:id="declineSection">
+                        <div class="slds-accordion__summary">
+                            <h3 class="slds-accordion__summary-heading">
+                                <button aria-controls="accordion-details-03" aria-expanded="true" class="slds-button slds-button_reset slds-accordion__summary-action" onclick="{!c.decline}">
+                                    <lightning:icon class="slds-m-right_x-small" iconName="utility:close" size="xx-small" alternativeText="Promo" title="Promo" />
+                                    <span class="accordion-title">Declined</span>
+                                    <div class="icon-arrow">
+                                        <lightning:icon class="slds-float_right i-arrow" iconName="utility:chevronleft" size="xx-small" alternativeText="Promo" title="Promo" aura:id="declineIcon"/>
+                                    </div>
+                                </button>
+                            </h3>
+                        </div>
+                        <div class="slds-accordion__content" id="accordion-details-03">
+                            <div class="slds-grid slds-grid_vertical slds-p-top_medium">
+                                <div class="slds-col">
+                                    <div class="slds-p-vertical_x-small slds-m-vertical_x-small approval-container">
+                                        <span class="approval-t">#BUY Hellmann's Traditional Mayonnaise 500g</span>
+                                    </div>
+                                </div>
+                                <div class="slds-col">
+                                    <div class="slds-p-vertical_x-small slds-m-vertical_x-small approval-container">
+                                        <span class="approval-t">#BUY 50 Chicken Knorr Broth 6 Cubes 57g</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                </li>
+            </ul>
+        </section>
+
+        <aura:if isTrue="{!v.isModalOpen}">
+            <section role="dialog" tabindex="-1" aria-labelledby="modal-heading-01" aria-modal="true" aria-describedby="modal-content-id-1" class="slds-modal slds-fade-in-open">
+                <div class="slds-modal__container">
+                    <header class="slds-modal__header">
+                        <button class="slds-button slds-button_icon slds-modal__close slds-button_icon-inverse" title="Close">
+                            <span class="slds-assistive-text">Close</span>
+                        </button>
+                        <h2 id="modal-heading-01" class="slds-modal__title slds-hyphenate">Confirm action</h2>
+                    </header>
+                    <div class="slds-modal__content slds-p-around_medium" id="modal-content-id-1">
+                        <p>Sit nulla est ex deserunt exercitation anim occaecat. Nostrud ullamco deserunt aute id consequat veniam incididunt duis in sint irure nisi. Mollit officia cillum Lorem ullamco minim nostrud elit officia tempor esse quis. Cillum sunt ad dolore quis
+                            aute consequat ipsum magna exercitation reprehenderit magna. Tempor cupidatat consequat elit dolor adipisicing.</p>
+                    </div>
+                    <footer class="slds-modal__footer">
+                        <button class="slds-button slds-button_neutral" onclick="{!c.modalHandler}">Cancel</button>
+                        <button class="slds-button slds-button_brand" onclick="{!c.modalHandler}">Save</button>
+                    </footer>
+                </div>
+            </section>
+            <div class="slds-backdrop slds-backdrop_open"></div>
+        </aura:if>
+
+    </div>
+
+</aura:component>

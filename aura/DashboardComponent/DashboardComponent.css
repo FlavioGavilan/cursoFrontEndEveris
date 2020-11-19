@@ -1,0 +1,192 @@
+/**
+ * Created by msantans on 15/07/2020.
+ */
+
+@font-face {
+    font-family: uregular;
+    src: url(/resource/uregular);
+}
+
+@font-face {
+    font-family: ubold;
+    src: url('/resource/ubold');
+}
+
+@font-face {
+    font-family: umedium;
+    src: url(/resource/umedium);
+}
+
+.THIS {
+    font-family: uregular;
+}
+
+.THIS .main {
+    background-color: white;
+}
+
+.THIS .h1-title {
+    font-size: 1.4rem;
+    font-weight: 700;
+}
+
+.THIS .h2-title {
+    padding-top: 20px;
+    font-size: 1rem;
+    font-weight: 900;
+}
+
+.THIS .report.blue {
+    background-color: #0C385C;
+}
+
+.THIS .report.green {
+    background-color: #003250;
+}
+
+.THIS .report.light {
+    background-color: #552BBF;
+}
+
+
+
+.THIS .report {
+    border-radius: 6px;
+}
+
+
+.THIS .actual {
+    font-weight: 600;
+    font-size: 1.8rem;
+    color: white;
+}
+
+
+.THIS .section1 {
+    padding: 10px 0 18px 0;
+}
+
+.THIS .section2 {
+    background-color: #EEF0F2;
+    border-radius: 20px 20px 0 0;
+    padding-bottom: 85px;
+}
+
+.THIS .section3 {
+    background-color: white;
+    border-radius: 20px 20px 0 0;
+    padding-bottom: 55px;
+    margin-top: -35px;
+}
+
+
+.THIS .slds-icon-utility-arrowup > lightning-primitive-icon > .slds-icon-text-default {
+    fill: rgb(9, 255, 82);
+}
+
+.THIS .slds-icon-utility-arrowdown > lightning-primitive-icon > .slds-icon-text-default {
+    fill: rgb(255, 65, 65);
+}
+
+.THIS .detail {
+    color: #cdcdcd;
+    /* font-weight: 700; */
+    font-size: 1rem;
+}
+
+.THIS .progress-bar {
+    height: 5px;
+}
+
+.THIS .progress-bar-left {
+    width: 73%;
+    background-color: #fff;
+    height: 100%;
+    border-radius: 20px;
+    float: left;
+}
+
+.THIS .progress-bar-right {
+    width: auto;
+    background-color:rgb(255, 65, 65);
+    height: 100%;
+    border-radius: 0 20px 20px 0;
+}
+
+
+.THIS .slds-box {
+    background-color: #fff;
+    border: none;
+    border-radius: 22px;
+}
+
+.THIS .balance-container {
+    margin: 0 15px;
+}
+
+.THIS .total-balance--label {
+    color: gray;
+    padding: 0;
+    margin-top: 4px;
+    font-weight: 300;
+}
+
+.THIS .total-balance--value {
+    font-size: 1.2rem;
+    font-weight: 900;
+    padding: 0;
+}
+
+.THIS .slds-col-c {
+    padding-right: .35rem;
+    padding-left: .35rem;
+}
+
+.THIS .report-inner {
+    padding: .4rem;
+}
+
+.THIS .analytics {
+    font-size: .9rem;
+}
+
+.THIS .monthly {
+    font-weight: .7rem;
+}
+
+.THIS .c-footer  {
+    color: white;
+    font-size: .7rem;
+}
+
+.THIS .month-destac {
+    font-weight: 900;
+    color: #552bbf;
+}
+
+.THIS .slds-icon-text-default {
+    fill: #828282;
+}
+
+.THIS .slds-button:focus,
+.THIS .slds-button:active {
+    border: 0;
+    outline: none;
+    box-shadow: none;
+}
+
+.THIS .slds-dropdown_actions a,
+.THIS .slds-dropdown--actions a {
+    color:#505050;
+}
+
+.THIS .disable {
+    pointer-events: none;
+    opacity: 0.6;
+}
+
+@keyframes draw {
+    0% {
+        height: 0;
+    }
+}

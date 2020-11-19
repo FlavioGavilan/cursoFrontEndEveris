@@ -1,0 +1,16 @@
+<aura:component implements="force:appHostable,flexipage:availableForAllPageTypes,lightning:isUrlAddressable"
+    access="global">
+
+    <ltng:require styles="{!$Resource.brand_color}" />
+
+    <div class="slds-box">
+        <h1 class="component c-title">Aula 02 [Variables]</h1>
+        <div class="slds-m-top_medium">
+            <button class="c-btn-fill slds-m-horizontal_small">Teste</button>
+            <button class="c-btn-outlined slds-m-horizontal_small">Teste 02</button>
+        </div>
+        <div class="slds-m-top_medium slds-alcenterign_absolute-">
+            <img src="https://engenharia360.com/wp-content/uploads/2015/05/Higgs.jpg" class="c-img-fit"/>
+        </div>
+    </div>
+</aura:component>

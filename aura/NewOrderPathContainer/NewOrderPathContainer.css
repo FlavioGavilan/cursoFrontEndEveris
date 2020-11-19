@@ -1,0 +1,15 @@
+/**
+ * Created by matheus on 19/06/20.
+ */
+
+.THIS {
+    height: calc(100vh - 83px);
+    padding: 0 !important;
+}
+
+.THIS .components-path__container {
+    position: relative;
+    float: left;
+    width: calc(100% - 40px);
+    height: calc(100vh - 85px);
+}

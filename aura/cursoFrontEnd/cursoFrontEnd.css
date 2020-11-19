@@ -1,0 +1,48 @@
+.THIS .slds-box {
+    background-color: var(--bg-color);
+    padding-bottom: 30px;
+}
+
+/***@style for application header ***/
+.THIS h1.application {
+    font-family: "SalesforceSans-Regular",Arial,sans-serif;
+    font-size: 1.2rem;
+    color: var(--con-color);
+    line-height: 1.25rem;
+    top: inherit;
+    text-transform: uppercase;
+    font-weight: bold;
+    text-align: center;
+}
+
+.THIS h1.application:before {
+    content: '@';
+    color: var(--second-color);
+    font-weight: bold;
+    margin:0 4px;
+    font-size: 1.4rem;
+}
+
+/*** @style for each h1 within child-components ***/
+.THIS h1.component:before {
+    color: var(--main-color);
+    content: '#';
+    font-size: 1.25rem;
+    font-weight: bold;
+    margin-right: 4px;
+}
+
+.THIS h1:after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 3px;
+    background-color: var(--main-color);
+    transition: width .3s;
+    margin-top: 3px;
+}
+
+/*** @style animation for child-component ***/
+.THIS h1:not(.application):hover:after {
+    width: 100%;
+}

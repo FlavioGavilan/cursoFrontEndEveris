@@ -1,0 +1,28 @@
+<!--
+ - Created by msantans on 21/07/2020.
+ -->
+
+<aura:component description="PersonalChartWeekly">
+
+    <div>
+        <div class="line-bars">
+        </div>
+        <div>
+            <ul class="chart-m">
+                <li>
+                    <span class="pink" style="height:5%"></span>
+                </li>
+                <li>
+                    <span class="blue" style="height:70%"></span>
+                </li>
+                <li>
+                    <span class="orange" style="height:50%"></span>
+                </li>
+                <li>
+                    <span class="pink" style="height:3%"></span>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+</aura:component>

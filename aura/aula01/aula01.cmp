@@ -1,0 +1,52 @@
+<aura:component implements="force:appHostable,flexipage:availableForAllPageTypes,lightning:isUrlAddressable" access="global">
+    <aura:attribute name="headerList" type="List" default="[{'name':'Homer Simpson', 'job':'Eng. de Segurança', 'beer':'Duff'}]" />
+    <aura:attribute name="characterList" type="List" default='[{"family":{"name":"Simpsons","relateds":[{"name":"Homer"},{"name":"Marjorie"},{"name":"Bart"},{"name":"Lisa"},{"name":"Maggie"},{"name":"Abe"}]}},{"family":{"name":"Szyslak","relateds":[{"name":"Moe"},{"name":"Yet"},{"name":"Little Moe"}]}},{"family":{"name":"Van Houten","relateds":[{"name":"Luann"},{"name":"Kirk"},{"name":"Millhouse"}]}}]' />
+
+    <ltng:require styles="{!$Resource.brand_color}" />
+
+    <div class="slds-box">
+        <h1 class="component c-title">Aula 01 [CSS Básico]</h1>
+        <nav>
+            <ul class="menu">
+                <aura:iteration items="{!v.headerList}" var="item">
+                    <li><a href="#">{!item.name}</a></li>
+                    <li><a href="#">{!item.job}</a></li>
+                    <li><a href="#">{!item.beer}</a></li>
+                </aura:iteration>
+            </ul>
+        </nav>
+        <div class="body-list">
+            <aura:iteration items="{!v.characterList}" var="character">
+                <div class="family">
+                    <p>{!character.family.name}</p>
+                    <ul>
+                        <aura:iteration items="{!character.family.relateds}" var="related">
+                            <li>{!related.name}</li>
+                        </aura:iteration>
+                    </ul>
+                </div>
+            </aura:iteration>
+        </div>
+        <div class="body-fields">
+            <div class="slds-form-element">
+                <label class="slds-form-element__label" >Text field</label>
+                <div class="slds-form-element__control">
+                    <input type="text" placeholder="Text field ..." class="slds-input" />
+                </div>
+            </div>
+            <div class="slds-form-element">
+                <label class="slds-form-element__label" >Number field</label>
+                <div class="slds-form-element__control">
+                    <input type="number" placeholder="Number field ..." class="slds-input" />
+                </div>
+            </div>
+            <div class="slds-form-element">
+                <label class="slds-form-element__label">Disabled</label>
+                <div class="slds-form-element__control">
+                    <input type="number" placeholder="Number field ..." class="slds-input" disabled="true"/>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</aura:component>

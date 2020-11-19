@@ -1,0 +1,65 @@
+.THIS .menu {
+    display: inline-flex;
+}
+
+.THIS .menu > li {
+    margin: 0 4px;
+}
+
+.THIS .body-list {
+    display: inline-flex;
+    top: 8px;
+    position: relative;
+}
+
+.THIS .family {
+    float: left;
+    position: relative;
+    margin: 0 8px;
+}
+
+.THIS p {
+    font-weight: bold;
+}
+
+.THIS .family > ul {
+    margin-left: 4px;
+}
+
+.THIS .family > ul > li:first-child:before {
+    content: '●';
+    margin-right: 6px;
+    color: #EF1815;
+}
+
+.THIS .family > ul > li:not(:first-child):before {
+    content: '-';
+    margin-right: 6px;
+}
+
+.THIS .family > ul > li:nth-child(2):before {
+    content: '#';
+    margin-right: 6px;
+    color: #EF1815;
+}
+
+.THIS .body-fields {
+    top: 14px;
+    position: relative;
+}
+
+.THIS input[type=text] {
+    border-color: #EF1815;
+}
+
+.THIS input[type=number] {
+    border-color: blue;
+}
+
+.THIS input[disabled]{
+    border-color: #d8d8d8;
+}
+
+.THIS button {
+    margin-top: 8px;
+}
